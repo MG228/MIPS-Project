@@ -1,0 +1,4 @@
+.data
+interger: .asciiz  "Please enter a postive interger: " #getting user input
+
+
