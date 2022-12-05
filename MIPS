@@ -1,6 +1,12 @@
 .data
-interger: .asciiz  "\nPlease enter a postive interger greater than 25: " #getting user input
+prompt: .asciiz  "\nPlease enter a postive interger greater than 25: " #getting user input
 error: .asciiz "\nIllegal Number! Please enter a postive number > 25!: " #error message
 
 .text
 main:
+# asks the user for an interger
+li $v0, 4 
+la $a0, prompt
+syscall
+
+
