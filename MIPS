@@ -1,4 +1,6 @@
 .data
-interger: .asciiz  "Please enter a postive interger: " #getting user input
+interger: .asciiz  "\nPlease enter a postive interger greater than 25: " #getting user input
+error: .asciiz "\nIllegal Number! Please enter a postive number > 25!: " #error message
 
-
+.text
+main:
