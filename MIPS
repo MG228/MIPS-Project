@@ -19,7 +19,7 @@ move $t0, $v0
 # check if the number is legal
 addi $t1, $zero, 25
 
-slt $t2, $t1, $t0
+slt $t2, $t0, $t1
 bne $t2, $zero, printm
 
 li $v0, 10
