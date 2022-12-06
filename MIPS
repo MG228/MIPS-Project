@@ -30,6 +30,17 @@ li $v0, 4
 la $a0, error
 syscall
 
+fib:
+bgt  $t0, 1, curse
+move $v0, $a0
+jr $ra
+
+curse:
+add $sp, $sp, 4
+sub $t8,$v0,2 # num - 2
+sub $t9,$v0,1 # num - 1
+add $v0,$t8,$t9 # add lines 40 + 41
+
 
 
 
