@@ -1,6 +1,8 @@
 .data
 message: .asciiz  "\nPlease enter a postive interger greater than 25: " #getting user input
 error: .asciiz "\nIllegal Number! Please enter a postive number > 25!: " #error message
+Name: .asciiz "\n\nFibonacci Sequence\n" #list title
+nl: .asciiz "\n" #new line
 
 .text
 main:
@@ -30,8 +32,6 @@ li $v0, 4
 la $a0, error
 syscall
 
-# fibonacci series
-sub $sp, $sp, 12 #stacks
-sw $t0, 0($sp)
-sw $s0, 4($sp)
-sw $ra, 8($sp)
+fib:
+
+
