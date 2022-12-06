@@ -36,6 +36,7 @@ fib:
 bgt  $t0, 1, curse
 move $v0, $a0
 jr $ra
+syscall
 
 curse:
 add $sp, $sp, 4
@@ -43,17 +44,15 @@ sub $t8,$v0,2 # num - 2
 sub $t9,$v0,1 # num - 1
 add $v0,$t8,$t9 # add lines 40 + 41
 jal fib ## call fib
+syscall
 
 la $a0, Name ## start printing
 la $a0, nl ## create new line
 la $a0, $zero ## return zero
 
 
-
-
-
-
 li $v0, 10
 syscall ## exit program
+
 
 
