@@ -29,3 +29,9 @@ printm:
 li $v0, 4
 la $a0, error
 syscall
+
+# fibonacci series
+sub $sp, $sp, 12 #stacks
+sw $t0, 0($sp)
+sw $s0, 4($sp)
+sw $ra, 8($sp)
